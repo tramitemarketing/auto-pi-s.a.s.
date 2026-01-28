@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Auto Pi S.A.S. - Rivenditore di auto usate garantite. Selezione accurata di veicoli controllati e garantiti.">
+    <title>Auto Pi S.A.S. - Auto Usate Garantite</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header / Navigazione -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">Auto Pi S.A.S.</a>
+            <nav class="nav">
+                <button class="nav__toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav__menu">
+                    <li><a href="#chi-siamo">Chi Siamo</a></li>
+                    <li><a href="#auto">Le Nostre Auto</a></li>
+                    <li><a href="#prenota">Prenota</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main>
+        <!-- Hero / Presentazione -->
+        <section class="hero">
+            <div class="container">
+                <h1>La tua prossima auto ti aspetta da Auto Pi S.A.S.</h1>
+                <p class="hero__subtitle">Qualità, trasparenza e convenienza nel mercato dell'usato</p>
+                <a href="#auto" class="btn btn--primary">Scopri le nostre auto</a>
+            </div>
+        </section>
+
+        <!-- Chi Siamo -->
+        <section id="chi-siamo" class="section section--alt">
+            <div class="container">
+                <h2>Chi Siamo</h2>
+                <div class="chi-siamo__content">
+                    <p class="chi-siamo__intro">Da oltre 20 anni, Auto Pi S.A.S. è sinonimo di fiducia e qualità nel mercato dell'usato. Ogni veicolo viene accuratamente selezionato e controllato per garantirti la massima tranquillità.</p>
+                    <div class="chi-siamo__valori">
+                        <div class="valore">
+                            <h3>Affidabilità</h3>
+                            <p>Ogni auto passa attraverso rigorosi controlli prima di essere messa in vendita.</p>
+                        </div>
+                        <div class="valore">
+                            <h3>Trasparenza</h3>
+                            <p>Storico completo del veicolo, chilometraggio certificato e nessuna sorpresa.</p>
+                        </div>
+                        <div class="valore">
+                            <h3>Convenienza</h3>
+                            <p>Prezzi competitivi e possibilità di finanziamento personalizzato.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Le Nostre Auto -->
+        <section id="auto" class="section">
+            <div class="container">
+                <h2>Le Nostre Auto</h2>
+                <div class="auto-grid" id="auto-grid">
+                    <!-- Le auto verranno caricate dinamicamente da JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Prenota -->
+        <section id="prenota" class="section section--alt">
+            <div class="container">
+                <h2>Prenota una Visita</h2>
+                <p class="section__intro">Compila il modulo per prenotare una visita e vedere l'auto che ti interessa.</p>
+                <form id="form-prenotazione" class="form">
+                    <div class="form__group">
+                        <label for="nome">Nome e Cognome *</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="telefono">Telefono *</label>
+                        <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9,}" title="Inserisci almeno 9 cifre">
+                    </div>
+                    <div class="form__group">
+                        <label for="auto-select">Auto di interesse *</label>
+                        <select id="auto-select" name="auto" required>
+                            <option value="">Seleziona un'auto</option>
+                            <!-- Le opzioni verranno caricate dinamicamente -->
+                        </select>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="data">Data preferita *</label>
+                            <input type="date" id="data" name="data" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="orario">Orario preferito *</label>
+                            <select id="orario" name="orario" required>
+                                <option value="">Seleziona orario</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label for="note">Note aggiuntive</label>
+                        <textarea id="note" name="note" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Invia Prenotazione</button>
+                </form>
+                <div id="form-conferma" class="form__conferma" hidden>
+                    <p>Grazie per la tua prenotazione! Ti contatteremo al più presto per confermare l'appuntamento.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contatti -->
+        <section id="contatti" class="section">
+            <div class="container">
+                <h2>Contatti</h2>
+                <div class="contatti__grid">
+                    <div class="contatti__info">
+                        <div class="contatto">
+                            <h3>Indirizzo</h3>
+                            <p>Via Roma, 123<br>00100 Roma (RM)</p>
+                        </div>
+                        <div class="contatto">
+                            <h3>Telefono</h3>
+                            <p><a href="tel:+390612345678">06 1234 5678</a></p>
+                        </div>
+                        <div class="contatto">
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@autopistas.it">info@autopistas.it</a></p>
+                        </div>
+                        <div class="contatto">
+                            <h3>Orari di Apertura</h3>
+                            <p>Lunedì - Venerdì: 9:00 - 19:00<br>
+                               Sabato: 9:00 - 13:00<br>
+                               Domenica: Chiuso</p>
+                        </div>
+                    </div>
+                    <div class="contatti__mappa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.6566283855847!2d12.4963655!3d41.9027835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDU0JzEwLjAiTiAxMsKwMjknNDYuOSJF!5e0!3m2!1sit!2sit!4v1234567890"
+                            width="100%"
+                            height="300"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            title="Mappa Auto Pi S.A.S.">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Auto Pi S.A.S. - Tutti i diritti riservati</p>
+            <nav class="footer__nav">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
