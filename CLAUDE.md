@@ -1,8 +1,8 @@
-# CLAUDE.md - Auto Pi S.A.S.
+# CLAUDE.md - Auto Più S.A.S.
  
 ## Panoramica Progetto
  
-Sito web single-page per **Auto Pi S.A.S.**, rivenditore di auto usate.
+Sito web single-page per **Auto Più S.A.S.**, rivenditore di auto usate.
 Layout verticale semplice con navigazione fluida tra le sezioni.
  
 ---
@@ -26,7 +26,7 @@ Layout verticale semplice con navigazione fluida tra le sezioni.
 ## Sezioni della Pagina
  
 ### 1. Header / Navigazione
-- Logo "Auto Pi S.A.S."
+- Logo "Auto Più S.A.S."
 - Menu di navigazione ancorato alle sezioni:
   - Chi Siamo
   - Le Nostre Auto
@@ -202,7 +202,7 @@ body: 1rem (16px)
  
 ### Meta Tags Essenziali
 ```html
-<title>Auto Pi S.A.S. - Auto Usate Garantite</title>
+<title>Auto Più S.A.S. - Auto Usate Garantite</title>
 <meta name="description" content="Rivenditore di auto usate...">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
@@ -220,10 +220,10 @@ body: 1rem (16px)
 ### Testi Suggeriti
  
 **Slogan Hero:**
-> "La tua prossima auto ti aspetta da Auto Pi S.A.S."
+> "La tua prossima auto ti aspetta da Auto Più S.A.S."
  
 **Chi Siamo:**
-> "Da oltre [X] anni, Auto Pi S.A.S. è sinonimo di fiducia e qualità nel mercato dell'usato. Ogni veicolo viene accuratamente selezionato e controllato per garantirti la massima tranquillità."
+> "Da oltre [X] anni, Auto Più S.A.S. è sinonimo di fiducia e qualità nel mercato dell'usato. Ogni veicolo viene accuratamente selezionato e controllato per garantirti la massima tranquillità."
  
 **Call to Action:**
 > "Scopri le nostre auto" / "Prenota una visita"

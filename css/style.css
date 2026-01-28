@@ -10,7 +10,7 @@
     --color-white: #FFFFFF;
     --color-bg-alt: #FAFAFA;
     --color-text: #333333;
-    --color-text-light: #666666;
+    --color-text-light: #333333;
     --color-border: #E0E0E0;
 
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -188,12 +188,19 @@ img {
    Hero Section
    ========================================================================== */
 .hero {
-    background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-white) 100%);
+    background-image: url('/images/fondoautopiu.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 120px 0 80px;
     text-align: center;
     margin-top: 60px;
 }
-
+.hero .container {
+    background-color: rgba(255, 255, 255, 0.808);
+    border-radius: 10px;
+    padding: 5rem 3.5rem;
+}
 .hero h1 {
     font-size: 2rem;
     font-weight: bold;
