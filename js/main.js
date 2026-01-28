@@ -100,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupNavigation();
     setupForm();
     setMinDate();
+    updateFooterYear();
 });
 
 // ==========================================================================
@@ -303,4 +304,14 @@ function formatPrezzo(prezzo) {
 
 function formatKm(km) {
     return new Intl.NumberFormat('it-IT').format(km);
+}
+
+// ==========================================================================
+// Aggiorna Anno Footer
+// ==========================================================================
+function updateFooterYear() {
+    const annoElement = document.getElementById('anno-corrente');
+    if (annoElement) {
+        annoElement.textContent = new Date().getFullYear();
+    }
 }
