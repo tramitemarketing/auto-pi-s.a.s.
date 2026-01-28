@@ -402,81 +402,6 @@ img {
 .card__description {
     font-size: 0.9rem;
     color: var(--color-text-light);
-    margin-bottom: 15px;
-}
-
-/* ==========================================================================
-   Form
-   ========================================================================== */
-.form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: var(--color-white);
-    padding: 30px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-}
-
-.form__group {
-    margin-bottom: 20px;
-}
-
-.form__group label {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: var(--color-text);
-}
-
-.form__group input,
-.form__group select,
-.form__group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    font-size: 1rem;
-    font-family: var(--font-family);
-    border: 2px solid var(--color-border);
-    border-radius: var(--border-radius);
-    transition: border-color var(--transition);
-    background-color: var(--color-white);
-}
-
-.form__group input:focus,
-.form__group select:focus,
-.form__group textarea:focus {
-    outline: none;
-    border-color: var(--color-primary);
-}
-
-.form__group textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-.form__row {
-    display: grid;
-    gap: 20px;
-}
-
-@media (min-width: 500px) {
-    .form__row {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.form__conferma {
-    max-width: 600px;
-    margin: 30px auto 0;
-    padding: 20px;
-    background-color: var(--color-primary-light);
-    border: 2px solid var(--color-primary);
-    border-radius: var(--border-radius);
-    text-align: center;
-}
-
-.form__conferma p {
-    color: var(--color-text);
-    font-weight: 500;
 }
 
 /* ==========================================================================
@@ -571,6 +496,102 @@ img {
         flex-direction: row;
         justify-content: space-between;
     }
+}
+
+/* ==========================================================================
+   Pagine Policy
+   ========================================================================== */
+.policy-page {
+    margin-top: 60px;
+}
+
+.policy-page h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--color-text);
+}
+
+.policy-page h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-primary);
+    margin-top: 15px;
+    border-radius: 2px;
+}
+
+.policy-page h2 {
+    font-size: 1.4rem;
+    margin: 30px 0 15px;
+    color: var(--color-text);
+    text-align: left;
+}
+
+.policy-page h2::after {
+    display: none;
+}
+
+.policy-page h3 {
+    font-size: 1.1rem;
+    margin: 20px 0 10px;
+    color: var(--color-text);
+}
+
+.policy-page p {
+    margin-bottom: 15px;
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+.policy-page ul {
+    margin: 0 0 20px 20px;
+    color: var(--color-text-light);
+}
+
+.policy-page ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.policy-intro {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: 30px;
+}
+
+.policy-date {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+}
+
+.cookie-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9rem;
+}
+
+.cookie-table th,
+.cookie-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid var(--color-border);
+}
+
+.cookie-table th {
+    background-color: var(--color-primary-light);
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.cookie-table td {
+    color: var(--color-text-light);
+}
+
+.cookie-table tr:nth-child(even) {
+    background-color: var(--color-bg-alt);
 }
 
 /* ==========================================================================
