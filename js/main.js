@@ -86,20 +86,13 @@ const autoDisponibili = [
 const navToggle = document.querySelector('.nav__toggle');
 const navMenu = document.querySelector('.nav__menu');
 const autoGrid = document.getElementById('auto-grid');
-const autoSelect = document.getElementById('auto-select');
-const formPrenotazione = document.getElementById('form-prenotazione');
-const formConferma = document.getElementById('form-conferma');
-const dataInput = document.getElementById('data');
 
 // ==========================================================================
 // Inizializzazione
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
     renderAutoGrid();
-    populateAutoSelect();
     setupNavigation();
-    setupForm();
-    setMinDate();
     updateFooterYear();
 });
 
@@ -127,28 +120,9 @@ function renderAutoGrid() {
                 </div>
                 <p class="card__price">${formatPrezzo(auto.prezzo)}</p>
                 <p class="card__description">${auto.descrizione}</p>
-                <button
-                    class="btn btn--primary btn--full"
-                    onclick="prenotaAuto(${auto.id})"
-                >
-                    Prenota Visione
-                </button>
             </div>
         </article>
     `).join('');
-}
-
-// ==========================================================================
-// Popola Select Auto nel Form
-// ==========================================================================
-function populateAutoSelect() {
-    if (!autoSelect) return;
-
-    const options = autoDisponibili.map(auto =>
-        `<option value="${auto.id}">${auto.marca} ${auto.modello} (${auto.anno}) - ${formatPrezzo(auto.prezzo)}</option>`
-    ).join('');
-
-    autoSelect.innerHTML = '<option value="">Seleziona un\'auto</option>' + options;
 }
 
 // ==========================================================================
@@ -176,118 +150,6 @@ function setupNavigation() {
             navMenu.classList.remove('active');
         }
     });
-}
-
-// ==========================================================================
-// Form Prenotazione
-// ==========================================================================
-function setupForm() {
-    if (!formPrenotazione) return;
-
-    formPrenotazione.addEventListener('submit', handleFormSubmit);
-
-    // Validazione telefono in tempo reale
-    const telefonoInput = document.getElementById('telefono');
-    if (telefonoInput) {
-        telefonoInput.addEventListener('input', (e) => {
-            e.target.value = e.target.value.replace(/[^0-9]/g, '');
-        });
-    }
-}
-
-function handleFormSubmit(e) {
-    e.preventDefault();
-
-    // Raccogli dati form
-    const formData = new FormData(formPrenotazione);
-    const dati = Object.fromEntries(formData.entries());
-
-    // Validazione aggiuntiva
-    if (!validateForm(dati)) {
-        return;
-    }
-
-    // Simula invio (qui si può integrare con backend/servizio email)
-    console.log('Prenotazione inviata:', dati);
-
-    // Mostra conferma
-    formPrenotazione.hidden = true;
-    formConferma.hidden = false;
-
-    // Scroll alla conferma
-    formConferma.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-    // Reset form dopo 5 secondi
-    setTimeout(() => {
-        formPrenotazione.reset();
-        formPrenotazione.hidden = false;
-        formConferma.hidden = true;
-    }, 5000);
-}
-
-function validateForm(dati) {
-    // Validazione email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(dati.email)) {
-        alert('Inserisci un indirizzo email valido.');
-        return false;
-    }
-
-    // Validazione telefono
-    if (dati.telefono.length < 9) {
-        alert('Il numero di telefono deve contenere almeno 9 cifre.');
-        return false;
-    }
-
-    // Validazione data (non nel passato)
-    const dataSelezionata = new Date(dati.data);
-    const oggi = new Date();
-    oggi.setHours(0, 0, 0, 0);
-
-    if (dataSelezionata < oggi) {
-        alert('Seleziona una data futura.');
-        return false;
-    }
-
-    return true;
-}
-
-// ==========================================================================
-// Imposta Data Minima
-// ==========================================================================
-function setMinDate() {
-    if (!dataInput) return;
-
-    const oggi = new Date();
-    const anno = oggi.getFullYear();
-    const mese = String(oggi.getMonth() + 1).padStart(2, '0');
-    const giorno = String(oggi.getDate()).padStart(2, '0');
-
-    dataInput.min = `${anno}-${mese}-${giorno}`;
-}
-
-// ==========================================================================
-// Prenota Auto (da griglia)
-// ==========================================================================
-function prenotaAuto(autoId) {
-    // Seleziona l'auto nel dropdown
-    if (autoSelect) {
-        autoSelect.value = autoId;
-    }
-
-    // Scroll alla sezione prenotazione
-    const sezionePrenotazione = document.getElementById('prenota');
-    if (sezionePrenotazione) {
-        sezionePrenotazione.scrollIntoView({ behavior: 'smooth' });
-
-        // Focus sul primo campo dopo lo scroll
-        setTimeout(() => {
-            const nomeInput = document.getElementById('nome');
-            if (nomeInput) {
-                nomeInput.focus();
-            }
-        }, 500);
-    }
 }
 
 // ==========================================================================
