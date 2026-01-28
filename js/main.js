@@ -1,5 +1,5 @@
 /**
- * Auto Pi S.A.S. - JavaScript Principale
+ * Auto Più S.A.S. - JavaScript Principale
  */
 
 // ==========================================================================
@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderAutoGrid();
     setupNavigation();
     updateFooterYear();
+    setupScrollAnimations();
 });
 
 // ==========================================================================
@@ -103,7 +104,7 @@ function renderAutoGrid() {
     if (!autoGrid) return;
 
     autoGrid.innerHTML = autoDisponibili.map(auto => `
-        <article class="card">
+        <article class="card animate-on-scroll">
             <img
                 src="${auto.immagine}"
                 alt="${auto.marca} ${auto.modello} ${auto.anno}"
@@ -123,6 +124,9 @@ function renderAutoGrid() {
             </div>
         </article>
     `).join('');
+
+    // Re-initialize scroll animations for new elements
+    setupScrollAnimations();
 }
 
 // ==========================================================================
@@ -150,6 +154,42 @@ function setupNavigation() {
             navMenu.classList.remove('active');
         }
     });
+}
+
+// ==========================================================================
+// Animazioni Scroll (Intersection Observer)
+// ==========================================================================
+function setupScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+    if (animatedElements.length === 0) return;
+
+    // Verifica supporto Intersection Observer
+    if ('IntersectionObserver' in window) {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -50px 0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        animatedElements.forEach(element => {
+            observer.observe(element);
+        });
+    } else {
+        // Fallback per browser senza supporto
+        animatedElements.forEach(element => {
+            element.classList.add('visible');
+        });
+    }
 }
 
 // ==========================================================================
