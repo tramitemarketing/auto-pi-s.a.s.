@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catalogo auto usate di Auto Più S.A.S. - Veicoli selezionati, controllati e garantiti.">
+    <title>Catalogo Auto Usate - Auto Più S.A.S.</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header / Navigazione -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Auto Più S.A.S.</a>
+            <nav class="nav">
+                <button class="nav__toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav__menu">
+                    <li><a href="index.html#chi-siamo">Chi Siamo</a></li>
+                    <li><a href="index.html#servizi">Servizi</a></li>
+                    <li><a href="catalogo.html" class="active">Catalogo Auto</a></li>
+                    <li><a href="index.html#contatti">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Catalogo -->
+        <section class="hero hero--small">
+            <div class="container">
+                <h1 class="animate-fade-up">Catalogo Auto Usate</h1>
+                <p class="hero__subtitle animate-fade-up animate-delay-1">Veicoli selezionati, controllati e garantiti</p>
+            </div>
+        </section>
+
+        <!-- Filtri e Catalogo -->
+        <section class="section">
+            <div class="container">
+                <div class="catalogo-intro animate-on-scroll">
+                    <p>Tutti i nostri veicoli sono sottoposti a rigorosi controlli meccanici ed estetici. Offriamo garanzia fino a 24 mesi e possibilità di finanziamento personalizzato.</p>
+                </div>
+
+                <div class="auto-grid" id="auto-grid">
+                    <!-- Le auto verranno caricate dinamicamente da JavaScript -->
+                </div>
+
+                <div class="catalogo-cta animate-on-scroll">
+                    <h3>Non trovi l'auto che cerchi?</h3>
+                    <p>Contattaci e ti aiuteremo a trovare il veicolo perfetto per le tue esigenze.</p>
+                    <a href="index.html#contatti" class="btn btn--primary">Contattaci</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Aggiuntive -->
+        <section class="section section--alt">
+            <div class="container">
+                <h2 class="animate-on-scroll">I Vantaggi dell'Acquisto</h2>
+                <div class="vantaggi-grid">
+                    <div class="vantaggio animate-on-scroll">
+                        <h3>Garanzia Inclusa</h3>
+                        <p>Tutti i veicoli sono coperti da garanzia fino a 24 mesi su motore e cambio.</p>
+                    </div>
+                    <div class="vantaggio animate-on-scroll">
+                        <h3>Finanziamenti</h3>
+                        <p>Soluzioni di finanziamento personalizzate con tassi competitivi.</p>
+                    </div>
+                    <div class="vantaggio animate-on-scroll">
+                        <h3>Permuta</h3>
+                        <p>Valutiamo gratuitamente il tuo usato e lo ritiriamo come permuta.</p>
+                    </div>
+                    <div class="vantaggio animate-on-scroll">
+                        <h3>Pratiche Incluse</h3>
+                        <p>Gestiamo noi tutte le pratiche burocratiche di passaggio di proprietà.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="anno-corrente"></span> Auto Più S.A.S. - Tutti i diritti riservati</p>
+            <nav class="footer__nav">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="cookie.html">Cookie Policy</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
