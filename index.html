@@ -3,48 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Auto Più S.A.S. - Compravendita auto usate e noleggio piattaforme aeree a Cupra Marittima (AP). Qualità, trasparenza e professionalità da oltre 20 anni.">
-    <meta name="robots" content="index, follow">
+    <meta name="description" content="Auto Più S.A.S. - Compravendita auto usate e noleggio piattaforme aeree. Qualità, trasparenza e professionalità.">
     <title>Auto Più S.A.S. - Compravendita Auto e Noleggio Piattaforme Aeree</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <!-- Open Graph -->
-    <meta property="og:title" content="Auto Più S.A.S. - Compravendita Auto e Noleggio Piattaforme Aeree">
-    <meta property="og:description" content="Da oltre 20 anni al vostro servizio. Compravendita auto usate e noleggio piattaforme aeree a Cupra Marittima (AP).">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="it_IT">
-    <meta property="og:site_name" content="Auto Più S.A.S.">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "AutoDealer",
-        "name": "AUTO PIU' SAS DI PASQUALINI CINZIA & C.",
-        "alternateName": "Auto Più S.A.S.",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "SS Adriatica Sud, km 378",
-            "addressLocality": "Cupra Marittima",
-            "postalCode": "63064",
-            "addressRegion": "AP",
-            "addressCountry": "IT"
-        },
-        "telephone": "+390735367529",
-        "email": "autopiusas@pec.it",
-        "vatID": "IT01264160449",
-        "taxID": "01264160449",
-        "description": "Compravendita auto usate e noleggio piattaforme aeree",
-        "currenciesAccepted": "EUR",
-        "paymentAccepted": "Contanti, Bonifico, Finanziamento"
-    }
-    </script>
 </head>
 <body>
     <!-- Header / Navigazione -->
     <header class="header">
         <div class="container">
-            <a href="#" class="logo">Auto Più S.A.S.</a>
+            <a href="#" class="logo">AutoPiu'S.A.S.</a>
             <nav class="nav">
                 <button class="nav__toggle" aria-label="Menu">
                     <span></span>
@@ -55,7 +22,6 @@
                     <li><a href="#chi-siamo">Chi Siamo</a></li>
                     <li><a href="#servizi">Servizi</a></li>
                     <li><a href="catalogo.html">Catalogo Auto</a></li>
-                    <li><a href="#richiedi-info">Richiedi Info</a></li>
                     <li><a href="#contatti">Contatti</a></li>
                 </ul>
             </nav>
@@ -141,7 +107,7 @@
                             <li>Possibilità di permuta</li>
                             <li>Gestione pratiche burocratiche</li>
                         </ul>
-                        <a href="#richiedi-info" class="btn btn--primary">Richiedi Valutazione</a>
+                        <a href="#contatti" class="btn btn--primary">Richiedi Valutazione</a>
                     </div>
 
                     <!-- Noleggio Piattaforme Aeree -->
@@ -163,7 +129,7 @@
                             <li>Noleggio giornaliero o mensile</li>
                             <li>Consegna e ritiro in sede</li>
                         </ul>
-                        <a href="#richiedi-info" class="btn btn--primary">Richiedi Preventivo</a>
+                        <a href="#contatti" class="btn btn--primary">Richiedi Preventivo</a>
                     </div>
                 </div>
             </div>
@@ -198,75 +164,34 @@
             </div>
         </section>
 
-        <!-- Richiedi Informazioni -->
-        <section id="richiedi-info" class="section">
-            <div class="container">
-                <h2 class="animate-on-scroll">Richiedi Informazioni</h2>
-                <p class="section__intro animate-on-scroll">Compila il modulo per richiedere informazioni, prenotare una visione o un preventivo. Ti risponderemo il prima possibile.</p>
-                <form id="form-contatto" class="form animate-on-scroll" novalidate>
-                    <div class="form__grid">
-                        <div class="form__group">
-                            <label for="nome" class="form__label">Nome e Cognome *</label>
-                            <input type="text" id="nome" name="nome" class="form__input" required placeholder="Mario Rossi">
-                            <span class="form__error" id="errore-nome"></span>
-                        </div>
-                        <div class="form__group">
-                            <label for="email" class="form__label">Email *</label>
-                            <input type="email" id="email" name="email" class="form__input" required placeholder="mario@esempio.it">
-                            <span class="form__error" id="errore-email"></span>
-                        </div>
-                        <div class="form__group">
-                            <label for="telefono" class="form__label">Telefono *</label>
-                            <input type="tel" id="telefono" name="telefono" class="form__input" required placeholder="333 1234567">
-                            <span class="form__error" id="errore-telefono"></span>
-                        </div>
-                        <div class="form__group">
-                            <label for="servizio" class="form__label">Servizio di interesse</label>
-                            <select id="servizio" name="servizio" class="form__input">
-                                <option value="">Seleziona un servizio</option>
-                                <option value="Acquisto auto">Acquisto auto</option>
-                                <option value="Vendita usato">Vendita usato</option>
-                                <option value="Noleggio piattaforma aerea">Noleggio piattaforma aerea</option>
-                                <option value="Altro">Altro</option>
-                            </select>
-                        </div>
-                        <div class="form__group form__group--full">
-                            <label for="messaggio" class="form__label">Messaggio</label>
-                            <textarea id="messaggio" name="messaggio" class="form__input form__textarea" rows="5" placeholder="Scrivi qui il tuo messaggio..."></textarea>
-                        </div>
-                    </div>
-                    <p class="form__privacy">Inviando questo modulo si aprirà il tuo client email con i dati inseriti. I dati saranno trattati in conformità alla nostra <a href="privacy.html">Privacy Policy</a>.</p>
-                    <button type="submit" class="btn btn--primary btn--full">Invia Richiesta</button>
-                </form>
-            </div>
-        </section>
-
         <!-- Contatti -->
-        <section id="contatti" class="section section--alt">
+        <section id="contatti" class="section">
             <div class="container">
                 <h2 class="animate-on-scroll">Contatti</h2>
                 <div class="contatti__grid">
                     <div class="contatti__info animate-on-scroll">
                         <div class="contatto">
                             <h3>Indirizzo</h3>
-                            <p>SS Adriatica Sud, km 378<br>63064 Cupra Marittima (AP)</p>
+                            <p>Via Roma, 123<br>00100 Roma (RM)</p>
                         </div>
                         <div class="contatto">
                             <h3>Telefono</h3>
-                            <p><a href="tel:+390735367529">0735 367529</a></p>
+                            <p><a href="tel:+390612345678">06 1234 5678</a></p>
                         </div>
                         <div class="contatto">
-                            <h3>PEC</h3>
-                            <p><a href="mailto:autopiusas@pec.it">autopiusas@pec.it</a></p>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@autopiu.it">info@autopiu.it</a></p>
                         </div>
                         <div class="contatto">
                             <h3>Orari di Apertura</h3>
-                            <p>Da definire</p>
+                            <p>Lunedì - Venerdì: 9:00 - 19:00<br>
+                               Sabato: 9:00 - 13:00<br>
+                               Domenica: Chiuso</p>
                         </div>
                     </div>
                     <div class="contatti__mappa animate-on-scroll">
                         <iframe
-                            src="https://www.google.com/maps?q=SS+Adriatica+Sud+km+378+63064+Cupra+Marittima+AP&output=embed"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.6566283855847!2d12.4963655!3d41.9027835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDU0JzEwLjAiTiAxMsKwMjknNDYuOSJF!5e0!3m2!1sit!2sit!4v1234567890"
                             width="100%"
                             height="300"
                             style="border:0;"
@@ -283,27 +208,13 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer__info">
-                <p>&copy; <span id="anno-corrente"></span> Auto Più S.A.S. di Pasqualini Cinzia & C. - Tutti i diritti riservati</p>
-                <p class="footer__legal">P.IVA / C.F.: 01264160449 | REA: 123614</p>
-            </div>
+            <p>&copy; <span id="anno-corrente"></span> Auto Più S.A.S. - Tutti i diritti riservati</p>
             <nav class="footer__nav">
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="cookie.html">Cookie Policy</a>
             </nav>
         </div>
     </footer>
-
-    <!-- Cookie Banner -->
-    <div id="cookie-banner" class="cookie-banner" hidden>
-        <div class="cookie-banner__content">
-            <p>Questo sito utilizza cookie tecnici e di terze parti per migliorare l'esperienza di navigazione. Per saperne di più consulta la nostra <a href="cookie.html">Cookie Policy</a>.</p>
-            <div class="cookie-banner__buttons">
-                <button id="cookie-accetta" class="btn btn--primary btn--small">Accetta</button>
-                <button id="cookie-rifiuta" class="btn btn--outline btn--small">Rifiuta</button>
-            </div>
-        </div>
-    </div>
 
     <script src="js/main.js"></script>
 </body>
