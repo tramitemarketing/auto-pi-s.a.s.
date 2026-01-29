@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cookie Policy di Auto Più S.A.S. - Informazioni sull'utilizzo dei cookie.">
+    <meta name="robots" content="noindex">
     <title>Cookie Policy - Auto Più S.A.S.</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Cookie Policy - Auto Più S.A.S.">
+    <meta property="og:description" content="Informativa sull'utilizzo dei cookie di Auto Più S.A.S.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Auto Più S.A.S.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,6 +31,7 @@
                     <li><a href="index.html#chi-siamo">Chi Siamo</a></li>
                     <li><a href="index.html#servizi">Servizi</a></li>
                     <li><a href="catalogo.html">Catalogo Auto</a></li>
+                    <li><a href="index.html#richiedi-info">Richiedi Info</a></li>
                     <li><a href="index.html#contatti">Contatti</a></li>
                 </ul>
             </nav>
@@ -66,6 +76,12 @@
                             <td>Sessione</td>
                         </tr>
                         <tr>
+                            <td>cookie-consent</td>
+                            <td>Tecnico</td>
+                            <td>Memorizza la preferenza cookie dell'utente</td>
+                            <td>Permanente</td>
+                        </tr>
+                        <tr>
                             <td>Google Maps</td>
                             <td>Terze parti</td>
                             <td>Visualizzazione mappa</td>
@@ -90,9 +106,9 @@
 
                 <h2>Contatti</h2>
                 <p>Per qualsiasi domanda relativa a questa Cookie Policy, è possibile contattarci:</p>
-                <p><strong>Auto Più S.A.S.</strong><br>
-                Email: info@autopiu.it<br>
-                Tel: 06 1234 5678</p>
+                <p><strong>AUTO PIU' SAS DI PASQUALINI CINZIA & C.</strong><br>
+                PEC: autopiusas@pec.it<br>
+                Tel: 0735 367529</p>
 
                 <p class="policy-date"><strong>Ultimo aggiornamento:</strong> <span id="data-aggiornamento"></span></p>
 
@@ -104,13 +120,27 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; <span id="anno-corrente"></span> Auto Più S.A.S. - Tutti i diritti riservati</p>
+            <div class="footer__info">
+                <p>&copy; <span id="anno-corrente"></span> Auto Più S.A.S. di Pasqualini Cinzia & C. - Tutti i diritti riservati</p>
+                <p class="footer__legal">P.IVA / C.F.: 01264160449 | REA: 123614</p>
+            </div>
             <nav class="footer__nav">
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="cookie.html">Cookie Policy</a>
             </nav>
         </div>
     </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner" hidden>
+        <div class="cookie-banner__content">
+            <p>Questo sito utilizza cookie tecnici e di terze parti per migliorare l'esperienza di navigazione. Per saperne di più consulta la nostra <a href="cookie.html">Cookie Policy</a>.</p>
+            <div class="cookie-banner__buttons">
+                <button id="cookie-accetta" class="btn btn--primary btn--small">Accetta</button>
+                <button id="cookie-rifiuta" class="btn btn--outline btn--small">Rifiuta</button>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
     <script>
